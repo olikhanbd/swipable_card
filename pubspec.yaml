@@ -1,6 +1,5 @@
 name: swipable_card
 description: "swipable_card is a Flutter package that makes it easy to implement swipeable card layouts, inspired by Tinder-style gestures."
-
 version: 0.0.1
 homepage: https://github.com/olikhanbd/swipable_card
 
