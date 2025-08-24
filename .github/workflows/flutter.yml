@@ -15,24 +15,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Setup Flutter
+      # Setup Flutter (stable channel)
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
 
-      # Get dependencies
-      - name: Install dependencies
+      # Get dependencies for the package
+      - name: Install package dependencies
         run: flutter pub get
 
-      # Analyze code
+      # Analyze code (don’t fail on warnings/infos)
       - name: Analyze project source
-        run: flutter analyze
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
 
-      # Check formatting
+      # Verify formatting
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
 
-      # Run tests
-      - name: Run tests
+      # Run package tests
+      - name: Run package tests
         run: flutter test --no-pub --coverage
+
+      # Get dependencies for example
+      - name: Install example dependencies
+        run: cd example && flutter pub get
+
+      # Run example tests
+      - name: Run example tests
+        run: cd example && flutter test

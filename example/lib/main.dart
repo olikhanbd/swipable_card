@@ -26,15 +26,19 @@ class MyApp extends StatelessWidget {
                 cardBuilder: (item) => CardContent(item: item),
                 loop: true,
                 onSwipeLeft: (item) {
+                  // ignore: avoid_print
                   print("Swiped Left: $item");
                 },
                 onSwipeRight: (item) {
+                  // ignore: avoid_print
                   print("Swiped Right: $item");
                 },
                 onSwipeUp: (item) {
+                  // ignore: avoid_print
                   print("Swiped Up: $item");
                 },
                 onSwipeDown: (item) {
+                  // ignore: avoid_print
                   print("Swiped Down: $item");
                 },
               ),
