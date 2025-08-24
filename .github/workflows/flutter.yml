@@ -15,17 +15,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Setup Flutter (stable channel)
+      # Setup Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
 
-      # Get dependencies for the package
+      # Install package dependencies
       - name: Install package dependencies
         run: flutter pub get
 
-      # Analyze code (don’t fail on warnings/infos)
+      # Analyze code (ignore warnings/infos)
       - name: Analyze project source
         run: flutter analyze --no-fatal-infos --no-fatal-warnings
 
@@ -33,14 +33,22 @@ jobs:
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
 
-      # Run package tests
+      # Run package tests with coverage
       - name: Run package tests
-        run: flutter test --no-pub --coverage
+        run: flutter test --coverage
 
-      # Get dependencies for example
+      # Install example dependencies
       - name: Install example dependencies
         run: cd example && flutter pub get
 
       # Run example tests
       - name: Run example tests
         run: cd example && flutter test
+
+      # Upload coverage to Codecov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # omit if public repo
+          files: ./coverage/lcov.info
+          fail_ci_if_error: true
