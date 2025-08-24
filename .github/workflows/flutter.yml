@@ -1,0 +1,39 @@
+name: Flutter Package CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Setup Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.24.0 # optional, lock version
+
+      # Get dependencies
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Analyze code
+      - name: Analyze project source
+        run: flutter analyze
+
+      # Check formatting
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      # Run tests
+      - name: Run tests
+        run: flutter test --no-pub --coverage
