@@ -7,27 +7,25 @@ swipable_card is a Flutter package that makes it easy to implement swipeable car
 
 # SwipeCards Demo
 
-# SwipeCards Demo
-
 | Loop | Without Loop |
 |------|--------------|
 | <img src="example/assets/loop.gif" width="250"/> | <img src="example/assets/without_loop.gif" width="250"/> |
 
 
 ## Features
+<list>
+<li>🚀 Tinder-like card swiping (left, right, up, down)</li>
 
-🚀 Tinder-like card swiping (left, right, up, down)
+<li>🎨 Customizable card widgets (images, text, or any widget)</li>
 
-🎨 Customizable card widgets (images, text, or any widget)
+<li>🎬 Built-in animations for smooth card transitions</li>
 
-🎬 Built-in animations for smooth card transitions
+<li>🧩 Callback support (detect swipe direction, card index, end of deck, etc.)</li>
 
-🧩 Callback support (detect swipe direction, card index, end of deck, etc.)
+<li>🔄 Stacked card layout with configurable number of visible cards</li>
 
-🔄 Stacked card layout with configurable number of visible cards
-
-⚡ Lightweight and easy to integrate
-
+<li>⚡ Lightweight and easy to integrate</li>
+</list>
 ## Example
 
 Check the [example](example/lib/main.dart) for a full demo app.
