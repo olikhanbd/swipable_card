@@ -5,6 +5,24 @@
 
 swipable_card is a Flutter package that makes it easy to implement swipeable card layouts, inspired by Tinder-style gestures. With smooth animations, intuitive gestures, and flexible customization, you can create engaging swipe interactions for dating apps, product showcases, quizzes, or any card-based UI.
 
+# SwipeCards Demo
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+
+  <!-- First GIF -->
+  <div style="text-align: center;">
+    <img src="example/assets/loop.gif" width="200" />
+    <div><strong>Loop</strong></div>
+  </div>
+
+  <!-- Second GIF -->
+  <div style="text-align: center;">
+    <img src="example/assets/without_loop.gif" width="200" />
+    <div><strong>Without Loop</strong></div>
+  </div>
+
+</div>
+
 ## Features
 
 🚀 Tinder-like card swiping (left, right, up, down)
