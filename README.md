@@ -1,7 +1,7 @@
 # SwipeCards Flutter Package
 
 ![CI](https://github.com/olikhanbd/swipable_card/actions/workflows/flutter.yml/badge.svg)
-[![Coverage](https://codecov.io/gh/olikhanbd/swipable_card/branch/main/graph/badge.svg)](https://codecov.io/gh/olikhanbd/swipable_card)
+[![Coverage](https://codecov.io/gh/olikhanbd/swipable_card/branch/main/graph/badge.svg?token=97764297-c21a-4f55-a180-52816b31ffd0)](https://codecov.io/gh/olikhanbd/swipable_card)
 
 swipable_card is a Flutter package that makes it easy to implement swipeable card layouts, inspired by Tinder-style gestures. With smooth animations, intuitive gestures, and flexible customization, you can create engaging swipe interactions for dating apps, product showcases, quizzes, or any card-based UI.
 
