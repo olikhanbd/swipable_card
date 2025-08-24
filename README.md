@@ -7,21 +7,12 @@ swipable_card is a Flutter package that makes it easy to implement swipeable car
 
 # SwipeCards Demo
 
-<div style="display: flex; justify-content: space-around; align-items: center;">
+# SwipeCards Demo
 
-  <!-- First GIF -->
-  <div style="text-align: center;">
-    <img src="example/assets/loop.gif" width="200" />
-    <div><strong>Loop</strong></div>
-  </div>
+| Loop | Without Loop |
+|------|--------------|
+| <img src="example/assets/loop.gif" width="250"/> | <img src="example/assets/without_loop.gif" width="250"/> |
 
-  <!-- Second GIF -->
-  <div style="text-align: center;">
-    <img src="example/assets/without_loop.gif" width="200" />
-    <div><strong>Without Loop</strong></div>
-  </div>
-
-</div>
 
 ## Features
 
