@@ -2,6 +2,10 @@
 
 All notable changes to this package will be documented in this file.
 
+## 0.0.2
+- Added documentation for SwipeCards and SwipeCardsController.
+- Fixed public_member_api_docs lint warnings.
+
 ## [0.0.1] - 2025-08-24
 ### Added
 - Initial release of `swipable_card` Flutter package.
