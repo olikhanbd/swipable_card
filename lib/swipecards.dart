@@ -83,6 +83,8 @@ class _SwipeCardsState<T> extends State<SwipeCards<T>> {
   double bottomCardYOffset = -10;
   double currentYOffset = -10;
 
+  bool _isSwiping = false;
+
   @override
   void initState() {
     super.initState();
@@ -120,7 +122,8 @@ class _SwipeCardsState<T> extends State<SwipeCards<T>> {
   }
 
   void swipeCard(String direction) {
-    if (cards.isEmpty) return;
+    if (cards.isEmpty || _isSwiping) return;
+    _isSwiping = true;
     T topCard = cards.last;
 
     // Animate card off-screen
@@ -162,6 +165,8 @@ class _SwipeCardsState<T> extends State<SwipeCards<T>> {
           widget.onSwipeDown?.call(topCard);
           break;
       }
+
+      _isSwiping = false;
     });
   }
 

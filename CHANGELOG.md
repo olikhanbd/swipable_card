@@ -2,6 +2,9 @@
 
 All notable changes to this package will be documented in this file.
 
+## 0.0.3
+- Fixed multiple card swap unique key violation error.
+
 ## 0.0.2
 - Added documentation for SwipeCards and SwipeCardsController.
 - Fixed public_member_api_docs lint warnings.
