@@ -5,16 +5,56 @@ import 'package:swipable_card/swipecardscontroller.dart';
 
 // ignore_for_file: library_private_types_in_public_api
 
+/// A widget that displays a stack of swipeable cards.
+///
+/// The cards are built using [cardBuilder], and can be swiped in
+/// four directions (left, right, up, down). Callbacks are triggered
+/// for each swipe direction if provided.
+///
+/// Example:
+/// ```dart
+/// SwipeCards<String>(
+///   items: ['A', 'B', 'C'],
+///   cardBuilder: (item) => Card(child: Text(item)),
+///   onSwipeLeft: (item) => print('Swiped left: $item'),
+/// )
+/// ```
 class SwipeCards<T> extends StatefulWidget {
+  /// The list of items that will be shown as swipeable cards.
   final List<T> items;
+
+  /// A builder function to create a widget for each [item].
   final Widget Function(T item) cardBuilder;
+
+  /// Whether the cards should loop when reaching the end of [items].
+  ///
+  /// If true, cards will cycle back to the first item after the last one
+  /// is swiped away.
   final bool loop;
+
+  /// Callback when a card is swiped left.
   final Function(T item)? onSwipeLeft;
+
+  /// Callback when a card is swiped right.
   final Function(T item)? onSwipeRight;
+
+  /// Callback when a card is swiped up.
   final Function(T item)? onSwipeUp;
+
+  /// Callback when a card is swiped down.
   final Function(T item)? onSwipeDown;
+
+  /// An optional controller to trigger swipe actions program
   final SwipeCardsController<T>? controller;
 
+  /// Creates a [SwipeCards] widget.
+  ///
+  /// - [items] is the list of data to be displayed as swipeable cards.
+  /// - [cardBuilder] is used to build a widget for each card.
+  /// - [loop] determines whether the card stack should restart after finishing.
+  /// - [onSwipeLeft], [onSwipeRight], [onSwipeUp], [onSwipeDown]
+  ///   are optional callbacks for swipe actions.
+  /// - [controller] allows programmatic swiping control.
   const SwipeCards({
     required this.items,
     required this.cardBuilder,
